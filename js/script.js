@@ -1,0 +1,1 @@
+alert('js is locked and loaded!');
