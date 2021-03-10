@@ -1,8 +1,8 @@
 /*----- constants -----*/
 
 const PLAYERS = {
-    '1': 'X',
-    '-1': 'O',
+    '1': 'Kit',
+    '-1': 'Kat',
     'null': ''
 };
 
@@ -29,4 +29,23 @@ const $buttonEl = $('button');
 const $gameboardEl = $('#gameboard');
 
 /*----- event listeners -----*/
+
+$buttonEl.click(init); // click to reset game
+$gameboardEl.on('click', '.square', handleClick);
+
 /*----- functions -----*/
+
+init(); // initial load of game
+
+function init() {
+    winner = false;
+    turn = 1;
+    gameboard = new Array(9).fill(null);
+}
+
+function handleClick(evt) {
+    const position = evt.target.dataset.index;
+    gameboard[position] = turn;
+    console.log(gameboard);
+    turn *= -1;
+}
