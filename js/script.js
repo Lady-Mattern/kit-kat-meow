@@ -1,1 +1,5 @@
-alert('js is locked and loaded!');
+/*----- constants -----*/
+/*----- app's state (variables) -----*/
+/*----- cached element references -----*/
+/*----- event listeners -----*/
+/*----- functions -----*/
