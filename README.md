@@ -1,4 +1,4 @@
-# Kit Kat Toe
+# Kit Kat Meow
 
 The classic game, but purrrfect for your browser! 😻
 
