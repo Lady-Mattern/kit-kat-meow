@@ -22,5 +22,11 @@ const COMBOS = [
 let winner, turn, gameboard;
 
 /*----- cached element references -----*/
+
+const $squareEls = $('.square');
+const $messageEl = $('h2');
+const $buttonEl = $('button');
+const $gameboardEl = $('#gameboard');
+
 /*----- event listeners -----*/
 /*----- functions -----*/
