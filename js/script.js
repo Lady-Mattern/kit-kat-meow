@@ -41,6 +41,17 @@ function init() {
     winner = false;
     turn = 1;
     gameboard = new Array(9).fill(null);
+    render();
+}
+
+function getWinner() {
+    for(let i = 0; i < COMBOS.length; i++) {
+        if(Math.abs(gameboard[COMBOS[i][0]] +
+                    gameboard[COMBOS[i][1]] +
+                    gameboard[COMBOS[i][2]]) === 3) return gambeboard[COMBOS[i][0]];
+    }
+    if(gameboard.includes(null)) return false;
+    return 'T';
 }
 
 function handleClick(evt) {
@@ -48,4 +59,5 @@ function handleClick(evt) {
     gameboard[position] = turn;
     console.log(gameboard);
     turn *= -1;
+    
 }
