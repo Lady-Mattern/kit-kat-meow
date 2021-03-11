@@ -59,5 +59,20 @@ function handleClick(evt) {
     gameboard[position] = turn;
     console.log(gameboard);
     turn *= -1;
-    
+    winner = getWinner();
+    render();
+}
+
+function render() {
+    gambeboard.forEach(function(value, index) {
+        $squareEls.eq(index).text(PLAYERS[value])
+    });
+
+    if(winner) {
+        $messageEl.text(`${PLAYERS[turn]}'s turn`);
+    } else if (winner === 'T') {
+        $messageEl.text('Tie Game');
+    } else {
+        $messageEl.text(`${PLAYERS[winner]} Wins!`);
+    }
 }
